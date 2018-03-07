@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/Work"
+            android:checkable="true"
+            android:enabled="true"
+            android:onClick="WorkItem"
+            android:title="I'll Work Now"
+            android:visible="true" />
+        <item
+            android:id="@+id/Study"
+            android:onClick="StudyItem"
+            android:title="I'll Study Now" />
+        <item
+            android:id="@+id/Status"
+            android:onClick="StatusIetem"
+            android:title="What's Your Status" />
+        <item
+            android:id="@+id/Idea"
+            android:onClick="IdeaItem"
+            android:title="Ideas For Good Day" />
+        <item
+            android:id="@+id/MotivationalAyat"
+            android:onClick="MotivationalAyatItem"
+            android:title="أيات قرآنيه محفزه " />
+        <item
+            android:id="@+id/SuccessfulHabit"
+            android:onClick="SuccessfulHabitItem"
+            android:title="Habit Of Successful People" />
+        <item
+            android:id="@+id/FailuerHabit"
+            android:onClick="FailuerHabitItem"
+            android:title="Habit Of Failure People" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>
