@@ -1,5 +1,7 @@
 package com.example.mohamed.jmyself;
 
+import android.content.Intent;
+import android.provider.AlarmClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,9 +13,7 @@ import java.util.Random;
 public class StatusActivity extends AppCompatActivity {
 
     TextView Status;
-    Random r=new Random();
-    int Random=(r.nextInt(9)+1);
-    @Override
+      @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_status);
@@ -23,64 +23,57 @@ public class StatusActivity extends AppCompatActivity {
 
 
     public void Sad(View view) {
-        String sad1="ربنا مش هيدّيك كل حاجة، بس هيديك حاجة متتوقعهاش";
-        String sad2="اتعلم ترضى واشكر ومتشتكيش، ربنا وعدك انه هيزيدك";
-        String sad3="وَإِذْ تَأَذَّنَ رَبُّكُمْ لَئِن شَكَرْتُمْ لأَزِيدَنَّكُمْ";
-        String sad4="وَمَن يَتَّقِ ٱللَّهَ يَجْعَل لَّهُ مِنْ أَمْرِهِ يُسْرا";
-        String sad5="إِنَّمَآ أَشْكُو بَثِّى وَحُزْنِى إِلَى ٱللَّه";
-        String sad6="وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰ";
-        String sad7="مَا أَنزَلْنَا عَلَيْكَ الْقُرْآنَ لِتَشْقَى";
-        String sad8="وَمَنْ أَعْرَضَ عَن ذِكْرِي فَإِنَّ لَهُ مَعِيشَةً ضَنكًا وَنَحْشُرُهُ يَوْمَ الْقِيَامَةِ أَعْمَىٰ";
-        String sad9="مَآ أَصَابَ مِن مّصِيبَةٍ إِلاّ بِإِذْنِ اللّهِ";
-        String sad10="وَمَن يُؤْمِن بِاللّهِ يَهْدِ قَلْبَهُ وَاللّهُ بِكُلّ شَيْءٍ عَلِيمٌ";
-        Toast.makeText(this, "The Random is"+Random, Toast.LENGTH_SHORT).show();
+        Random r=new Random();
+        int Random=(r.nextInt(9)+1);
+
+       String[] Sad=getResources().getStringArray(R.array.Sad);
         if (Random== 1)
         {
-            Status.setText(sad1);
+            Status.setText(Sad[0]);
         }
         else if (Random==2)
         {
-            Status.setText(sad2);
+            Status.setText(Sad[1]);
 
         }
         else if(Random==3)
         {
-            Status.setText(sad3);
+            Status.setText(Sad[2]);
 
         }
         else if(Random==4)
         {
-            Status.setText(sad4);
+            Status.setText(Sad[3]);
 
         }
         else if(Random==5)
         {
-            Status.setText(sad5);
+            Status.setText(Sad[4]);
 
         }
         else if(Random==6)
         {
-            Status.setText(sad6);
+            Status.setText(Sad[5]);
 
         }
         else if(Random==7)
         {
-            Status.setText(sad7);
+            Status.setText(Sad[6]);
 
         }
         else if(Random==8)
         {
-            Status.setText(sad8);
+            Status.setText(Sad[7]);
 
         }
         else if(Random==9)
         {
-            Status.setText(sad9);
+            Status.setText(Sad[8]);
 
         }
         else if(Random==10)
         {
-            Status.setText(sad10);
+            Status.setText(Sad[9]);
 
         }
 
@@ -92,64 +85,58 @@ public class StatusActivity extends AppCompatActivity {
     }
 
     public void Happy(View view) {
-        String happy1="رضا أهلك كنز من كنوز الدنيا بيفتحلك اي باب مقفول";
-        String happy2="اتعلم ترضى واشكر ومتشتكيش، ربنا وعدك انه هيزيدك";
-        String happy3="وَإِذْ تَأَذَّنَ رَبُّكُمْ لَئِن شَكَرْتُمْ لأَزِيدَنَّكُمْ";
-        String happy4="وَمَن يَتَّقِ ٱللَّهَ يَجْعَل لَّهُ مِنْ أَمْرِهِ يُسْرا";
-        String happy5="إِنَّمَآ أَشْكُو بَثِّى وَحُزْنِى إِلَى ٱللَّه";
-        String happy6="وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰ";
-        String happy7="مَا أَنزَلْنَا عَلَيْكَ الْقُرْآنَ لِتَشْقَى";
-        String happy8="وَمَنْ أَعْرَضَ عَن ذِكْرِي فَإِنَّ لَهُ مَعِيشَةً ضَنكًا وَنَحْشُرُهُ يَوْمَ الْقِيَامَةِ أَعْمَىٰ";
-        String happy9="مَآ أَصَابَ مِن مّصِيبَةٍ إِلاّ بِإِذْنِ اللّهِ";
-        String happy10="وَمَن يُؤْمِن بِاللّهِ يَهْدِ قَلْبَهُ وَاللّهُ بِكُلّ شَيْءٍ عَلِيمٌ";
-        Toast.makeText(this, "The Random is"+Random, Toast.LENGTH_SHORT).show();
+        Random r=new Random();
+        int Random=(r.nextInt(9)+1);
+
+        String[] Happy=getResources().getStringArray(R.array.Happy);
+
         if (Random== 1)
         {
-            Status.setText(happy1);
+            Status.setText(Happy[0]);
         }
         else if (Random==2)
         {
-            Status.setText(happy2);
+            Status.setText(Happy[1]);
 
         }
         else if(Random==3)
         {
-            Status.setText(happy3);
+            Status.setText(Happy[2]);
 
         }
         else if(Random==4)
         {
-            Status.setText(happy4);
+            Status.setText(Happy[3]);
 
         }
         else if(Random==5)
         {
-            Status.setText(happy5);
+            Status.setText(Happy[4]);
 
         }
         else if(Random==6)
         {
-            Status.setText(happy6);
+            Status.setText(Happy[5]);
 
         }
         else if(Random==7)
         {
-            Status.setText(happy7);
+            Status.setText(Happy[6]);
 
         }
         else if(Random==8)
         {
-            Status.setText(happy8);
+            Status.setText(Happy[7]);
 
         }
         else if(Random==9)
         {
-            Status.setText(happy9);
+            Status.setText(Happy[8]);
 
         }
         else if(Random==10)
         {
-            Status.setText(happy10);
+            Status.setText(Happy[9]);
 
         }
 
@@ -160,8 +147,64 @@ public class StatusActivity extends AppCompatActivity {
     }
 
     public void Sick(View view) {
-    }
+        Random r=new Random();
+        int Random=(r.nextInt(9)+1);
 
-    public void Heart(View view) {
-    }
+        String[] Sick=getResources().getStringArray(R.array.Sick);
+
+        if (Random== 1)
+        {
+            Status.setText(Sick[0]);
+        }
+        else if (Random==2)
+        {
+            Status.setText(Sick[1]);
+
+        }
+        else if(Random==3)
+        {
+            Status.setText(Sick[2]);
+
+        }
+        else if(Random==4)
+        {
+            Status.setText(Sick[3]);
+
+        }
+        else if(Random==5)
+        {
+            Status.setText(Sick[4]);
+
+        }
+        else if(Random==6)
+        {
+            Status.setText(Sick[5]);
+
+        }
+        else if(Random==7)
+        {
+            Status.setText(Sick[6]);
+
+        }
+        else if(Random==8)
+        {
+            Status.setText(Sick[7]);
+
+        }
+        else if(Random==9)
+        {
+            Status.setText(Sick[8]);
+
+        }
+        else if(Random==10)
+        {
+            Status.setText(Sick[9]);
+
+        }
+
+        else {
+            Toast.makeText(this, "No", Toast.LENGTH_SHORT).show();
+        }    }
+
+
 }

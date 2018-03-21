@@ -4,31 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mohamed.jmyself.StatusActivity">
+    tools:context="com.example.mohamed.jmyself.StatusActivity"
+    tools:layout_editor_absoluteY="25dp">
 
     <ImageView
         android:id="@+id/SadButton"
         android:layout_width="83dp"
         android:layout_height="92dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
         android:onClick="Sad"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/sad" />
 
     <TextView
         android:id="@+id/Status"
-        android:layout_width="0dp"
+        android:layout_width="368dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="140dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -37,6 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="Sad"
         android:textColor="@android:color/background_light"
         android:textSize="24sp"
@@ -48,13 +51,11 @@
         android:id="@+id/imageView3"
         android:layout_width="85dp"
         android:layout_height="87dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="60dp"
         android:onClick="Happy"
-        app:layout_constraintEnd_toEndOf="@+id/SadButton"
-        app:layout_constraintStart_toStartOf="@+id/SadButton"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/happy" />
 
     <TextView
@@ -63,6 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="Happy"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
@@ -75,56 +77,31 @@
         android:id="@+id/imageView5"
         android:layout_width="85dp"
         android:layout_height="95dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="192dp"
         android:onClick="Sick"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintBottom_toTopOf="@+id/Status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/sick" />
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="0dp"
+        android:layout_width="69dp"
         android:layout_height="25dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:text="Sick"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="82dp"
-        android:layout_height="76dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginStart="8dp"
-        android:onClick="Heart"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintHorizontal_bias="0.777"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:srcCompat="@drawable/heart"
-        tools:layout_editor_absoluteY="435dp" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="Love"
-        android:textAlignment="center"
-        android:textColor="@android:color/background_light"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView6"
-        app:layout_constraintHorizontal_bias="0.533"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 </android.support.constraint.ConstraintLayout>
